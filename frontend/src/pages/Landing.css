@@ -1,0 +1,262 @@
+.landing-container {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  height: 450px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 250px;
+  margin-top: -20px;
+}
+
+.hero-text h1 {
+  font-size: 80px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 2rem;
+  max-width: 450px;
+  color: #d0d0d0;
+  margin-top: 15px;
+}
+
+.hero-text button {
+  background-color: #ff6a00;
+  padding: 12px 24px;
+  font-size: 12px;
+  font-weight: 545;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-left: 0;
+}
+
+.hero-text button:hover {
+  background-color: #e65900;
+}
+
+/* Shared Image Styling */
+.hero-image {
+  
+  height: 485.09px;
+  width: 873px;
+}
+.hero-right{
+  margin-top: -40px;
+  margin-right: 20px;
+}
+
+.hero-image {
+  width: 873px;
+  height: 485.09px;
+  margin-left: -20px;
+  flex-shrink: 0;          /* 👈 Prevent shrinking */
+  position: relative;      /* 👈 Optional: in case you want to add decorations */
+}
+
+.hero-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 16px;
+
+  /* Shiny white border and glow */
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    0 0 12px rgba(255, 255, 255, 0.4), 
+    0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* How It Works Section */
+.how-section {
+  padding: 4rem 2rem;
+  color: #ffffff;
+}
+
+.stext {
+  color: #ffffff;
+  text-align: center;
+  font-size: 70px;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+
+
+.how-section li {
+  color: #000;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.how-section li span {
+  width: 40px;
+  height: 40px;
+  background-color: #ff6a00;
+  color: #000;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+}
+
+.how-section li h3 {
+  color: #000;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.how-section li p {
+  color:black;
+}
+
+.how-section button {
+  display: block;
+  margin: 3rem auto 0;
+  background-color: #ff6a00;
+  color: #000;
+  padding: 12px 24px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.how-section button:hover {
+  background-color: #e65900;
+}
+
+/* Glow Button */
+.glow-button {
+  padding: 12px 28px;
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #d3d3d3 0%, #fff 100%);
+  border: none;
+  border-radius: 50px;
+  color: #5A250A;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  box-shadow: 0 0 12px rgba(255, 140, 0, 0.6),
+              0 0 24px rgba(255, 140, 0, 0.4),
+              0 0 36px rgba(255, 80, 0, 0.2);
+}
+
+.glow-button::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: radial-gradient(circle at 80% 50%, #ff914d, transparent);
+  transform: translateX(25%);
+  filter: blur(15px);
+  z-index: -1;
+}
+
+.glow-button:hover {
+  transform: scale(1.05);
+}
+
+/* Misc Styles */
+.bordered-image {
+  width: 873px;
+  height: 485.09px;
+  border-radius: 16px;
+  display: block;
+}
+
+.dtext {
+  font-size: 21px;
+  font-weight: bold;
+  margin-right: 0px;
+  
+  
+}
+
+.image-text-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  padding-left: 0; /* Make sure no padding is added */
+  margin-left: 50px;
+  
+}
+
+
+.rotating-text {
+  margin-left: auto;
+  margin-right: 80px;
+}
+
+.steps-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.step-card span {
+  display: inline-block;
+  background-color: #00e5ff;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.step-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
