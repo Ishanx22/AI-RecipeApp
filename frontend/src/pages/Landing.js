@@ -14,6 +14,7 @@ import SplitText from "../components/SplitText";
 
 
 
+
 export default function Landing({ onStart }) {
   const navigate = useNavigate();
   return (
@@ -31,11 +32,23 @@ export default function Landing({ onStart }) {
         
           <div className="hero-section">
             <div className="hero-text">
-              <h1 style={{ margin: 0 }}>Recipe Genie</h1>
-              <p>Recipe Genie is your all-in-one AI cooking assistant.<br></br>Add ingredients and get  delicious recipes instantly.</p>
-              <button className="glow-button" onClick={() => navigate('/app')}>
-                Start →
-              </button>
+              <div style={{ display: "flex", flexDirection: "column", margin: 0 }}>
+  <h1 style={{ margin: 0 ,color:"grey"}}>Create Perfect</h1>
+  <h1 style={{ margin: 0 }}>Recipes with AI</h1>
+</div>
+
+              <p>Transfer your ingredients into delicious meals.Our AI chef creates personalized recipes based on what you have and your dietary goals.</p>
+             <div style={{ display: "flex", gap: "0rem" }}>
+  <button className="glow-button" onClick={() => navigate('/app')}>
+    Start Cooking
+  </button>
+  <button className="glow-button" onClick={() => navigate('/about')}>
+    Learn More
+  </button>
+</div>
+
+
+
             </div>
 
 \            <div className="hero-right">
@@ -54,6 +67,12 @@ export default function Landing({ onStart }) {
           </div>
         </div>
 
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
         <div className="image-text-flex">
           <div className="hero-image" >
             <img src={landingImage} alt="App preview" />
@@ -67,13 +86,13 @@ export default function Landing({ onStart }) {
         <div style={{ height: "100px" }} />
       
 
-\      <div className="how-section">
+   <div className="how-section">
 
 
         
 <div className="stext">
   <SplitText
-  text="How it Works!"
+  text="Why Choose Recipe Genie"
   className="text-2xl font-semibold text-center"
   delay={100}
   duration={0.6}
@@ -86,6 +105,19 @@ export default function Landing({ onStart }) {
   textAlign="center"
 />
 </div>
+
+<p
+  style={{
+    fontSize: "1.5rem",      // bigger text
+    textAlign: "center",     // center align text
+    margin: "0 auto",        // center block itself
+    maxWidth: "600px", 
+    color:"grey"      // optional: limit line length
+  }}
+>
+  Our intelligent recipe generator makes cooking easier, healthier and more enjoyable.
+</p>
+
 
 
 
@@ -100,47 +132,54 @@ export default function Landing({ onStart }) {
         
         <div className="steps-row">
           <SpotlightCard className="custom-spotlight-card" spotlightColor="white">
-            <div className="step-card">
-              <span>1</span>
-              <div>
-                <h3>Add Ingredients</h3>
-                <p>Enter items you have — fridge, pantry, or freezer.</p>
-              </div>
-            </div>
-          </SpotlightCard>
+  <div className="step-card">
+    <span style={{ fontSize: "2rem", background: "none" }}>⭐</span>
+    <div>
+      <h3>AI-Powered</h3>
+      <p>Advanced AI analyzes your ingredients <br></br>and preferences to create unique,<br></br> delicious recipes tailored just for you.</p>
+    </div>
+  </div>
+</SpotlightCard>
+
 
           <SpotlightCard className="custom-spotlight-card" spotlightColor="white">
-            <div className="step-card">
-              <span>2</span>
-              <div>
-                <h3>AI-Powered Ideas</h3>
-                <p>Our AI whips up creative recipe suggestions instantly.</p>
-              </div>
-            </div>
-          </SpotlightCard>
+  <div className="step-card">
+    <span style={{ fontSize: "2rem", background: "none" }}>💚</span>
+    <div>
+      <h3>Nutrition Focused</h3>
+      <p>Set your calorie and protein <br></br>goals. Get recipes that<br></br> not only taste great but <br></br>also meet your health objectives.</p>
+    </div>
+  </div>
+</SpotlightCard>
+
 
           <SpotlightCard className="custom-spotlight-card" spotlightColor="white">
-            <div className="step-card">
-              <span>3</span>
-              <div>
-                <h3>Choose & Customize</h3>
-                <p>Select your favorite and tweak ingredients or steps.</p>
-              </div>
-            </div>
-          </SpotlightCard>
+  <div className="step-card">
+    <span style={{ fontSize: "2rem", background: "none" }}>🕓</span>
+    <div>
+      <h3>Quick & Easy</h3>
+      <p>Get instant recipe suggestions <br></br>in seconds. No more wondering <br></br> what to cook with your available ingredients.</p>
+    </div>
+  </div>
+</SpotlightCard>
 
-          <SpotlightCard className="custom-spotlight-card" spotlightColor="white">
-            <div className="step-card">
-              <span>4</span>
-              <div>
-                <h3>Cook & Enjoy</h3>
-                <p>Save, share, and get cooking—delicious meals await!</p>
-              </div>
-            </div>
-          </SpotlightCard>
+
+          
         </div>
 
-        <button onClick={() => navigate('/app')}>FIND RECIPES</button>
+        <br></br>
+        <br></br>
+
+        <div style={{ textAlign: "center" }}>
+  <h2>Ready to Transform Your Cooking?</h2>
+  <br></br>
+  <p>
+    Join thousands of home cooks who are already creating amazing meals with RecipeAI
+  </p>
+</div>
+
+
+        <button onClick={() => navigate('/app')}>Get Started Now</button>
       </div>
       </div>
 

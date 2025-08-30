@@ -1,14 +1,17 @@
 .card-spotlight {
   position: relative;
   border-radius: 1.5rem;
-  background-color: rgba(28, 2, 71, 0.845);
+  background: rgba(255, 255, 255, 0.08); /* faint white tint */
   padding: 2rem;
   overflow: hidden;
   --mouse-x: 50%;
   --mouse-y: 50%;
-  --spotlight-color: rgba(150, 90, 255, 0.2); /* ✅ Purple spotlight */
-  border: none; /* ❌ Removed border */
+  --spotlight-color: rgba(255, 255, 255, 0.15); /* softer white spotlight */
+  border: 1px solid rgba(255, 255, 255, 0.12); /* subtle edge */
+  backdrop-filter: blur(12px); /* frosted glass effect */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
 }
+
 
 .card-spotlight::before {
   content: "";

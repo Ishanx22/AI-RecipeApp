@@ -37,12 +37,12 @@ function handleResetList() {
     alert("📋 Recipe copied to clipboard!");
   }
 
-  async function handleGetRecipe() {
+    async function handleGetRecipe() {
     setLoading(true);
     setRecipe("");
     let prompt = `Suggest a recipe using these ingredients: ${items.join(
       ", "
-    )}. Only output the recipe title,ingredients and instructions. Do not include internal thoughts or explanations.`;
+    )}. Only output the recipe title, ingredients and instructions. Do not include internal thoughts or explanations.`;
 
     if (calories.trim()) {
       prompt += ` Limit total calories to around ${calories} kcal.`;
@@ -52,19 +52,33 @@ function handleResetList() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/chatgpt", {
+      const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
+          "Authorization": "Bearer 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", // 🔑 replace with your actual key
+          "HTTP-Referer": "<YOUR_SITE_URL>",               // optional
+          "X-Title": "<YOUR_SITE_NAME>",                   // optional
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ prompt }),
+        body: JSON.stringify({
+          model: "deepseek/deepseek-r1:free",
+          messages: [
+            {
+              role: "user",
+              content: prompt,
+            },
+          ],
+        }),
       });
 
       const data = await response.json();
 
-      const cleanedReply = data.reply.replace(/<think>[\s\S]*?<\/think>/gi, "").trim();
+      // Extract assistant's reply
+      const cleanedReply = data.choices?.[0]?.message?.content
+        ?.replace(/<think>[\s\S]*?<\/think>/gi, "")
+        .trim();
 
-      setRecipe(cleanedReply);
+      setRecipe(cleanedReply || "❌ No recipe returned");
       setShowPopup(true);
     } catch (err) {
       console.error("Error:", err);
@@ -73,6 +87,7 @@ function handleResetList() {
       setLoading(false);
     }
   }
+
 
  
 

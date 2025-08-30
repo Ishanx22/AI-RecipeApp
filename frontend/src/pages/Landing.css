@@ -51,19 +51,15 @@
 }
 
 /* Shared Image Styling */
-.hero-image {
-  
-  height: 485.09px;
-  width: 873px;
-}
+
 .hero-right{
   margin-top: -40px;
   margin-right: 20px;
 }
 
 .hero-image {
-  width: 873px;
-  height: 485.09px;
+  width: 60%;
+  height:60%;
   margin-left: -20px;
   flex-shrink: 0;          /* 👈 Prevent shrinking */
   position: relative;      /* 👈 Optional: in case you want to add decorations */
@@ -159,8 +155,8 @@
   color: #5A250A;
   cursor: pointer;
   position: relative;
-  overflow: hidden;
-  transition: transform 0.2s ease;
+  overflow: visible; /* allow glow to show outside */
+  transition: transform 0.3s ease;
   box-shadow: 0 0 12px rgba(255, 140, 0, 0.6),
               0 0 24px rgba(255, 140, 0, 0.4),
               0 0 36px rgba(255, 80, 0, 0.2);
@@ -169,19 +165,22 @@
 .glow-button::after {
   content: "";
   position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 50%;
-  background: radial-gradient(circle at 80% 50%, #ff914d, transparent);
-  transform: translateX(25%);
-  filter: blur(15px);
-  z-index: -1;
+  inset: -0.2px; /* spread glow outside */
+  border-radius: inherit;
+  background: linear-gradient(90deg, #d3d3d3 0%, #fff 100%);
+    color: #5A250A;
+
+  box-shadow: 0 0 12px rgba(255, 140, 0, 0.6),
+              0 0 24px rgba(255, 140, 0, 0.4),
+              0 0 36px rgba(255, 80, 0, 0.2);
+  filter: blur(25px);
+  z-index: -1; /* behind button */
 }
 
 .glow-button:hover {
-  transform: scale(1.05);
+  transform: scale(1.6);
 }
+
 
 /* Misc Styles */
 .bordered-image {

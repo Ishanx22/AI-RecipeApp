@@ -31,7 +31,10 @@
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-right: 10px;
+  margin-left: auto; /* pushes it to the right */
 }
+
 
 .nav-button {
   padding: 0.45rem 1.2rem;

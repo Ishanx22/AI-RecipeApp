@@ -10,7 +10,7 @@ export default function Header() {
     <header className="header1">
       <div className="header-content">
         <div className="header-title">
-          <span role="img" aria-label="genie"></span> Recipe Genie
+          <span role="img" aria-label="genie"></span> 🧞‍♂️Recipe Genie
         </div>
         <nav className="nav-container">
           <button
@@ -19,6 +19,13 @@ export default function Header() {
           >
             Home
           </button>
+          <button
+            className={`nav-button ${location.pathname === "/app" ? "active" : ""}`}
+            onClick={() => navigate("/app")}
+          >
+            Generate Recipe
+          </button>
+
           <button
             className={`nav-button ${location.pathname === "/about" ? "active" : ""}`}
             onClick={() => navigate("/about")}
