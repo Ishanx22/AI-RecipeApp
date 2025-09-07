@@ -6,7 +6,8 @@
 
 ## Demo
 
-Insert gif or link to demo
+![Recipe Genie Demo](/project1.png)
+
 
 
 ## Features
