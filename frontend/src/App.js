@@ -55,9 +55,9 @@ function handleResetList() {
       const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
-          "Authorization": "Bearer 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", // 🔑 replace with your actual key
-          "HTTP-Referer": "<YOUR_SITE_URL>",               // optional
-          "X-Title": "<YOUR_SITE_NAME>",                   // optional
+          "Authorization": "Bearer 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", 
+          "HTTP-Referer": "<YOUR_SITE_URL>",               
+          "X-Title": "<YOUR_SITE_NAME>",                   
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -106,6 +106,9 @@ function handleResetList() {
         <h2 className="header">Recipe Genie</h2>
 
         <div className="input-area">
+<label style={{ fontSize: "20px", fontWeight: "600", textAlign: "left"}}>
+  Add ingredients
+</label>
           <input
             value={ingredient}
             onChange={handleChange}

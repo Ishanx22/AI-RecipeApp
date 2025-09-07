@@ -114,7 +114,6 @@ export default function Aurora(props) {
     colorStops = ["rgb(82,39,255)", "rgb(124,255,103)", "rgb(82,39,255)"],
     amplitude = 1.0,
     blend = 0.5,
-    speed=0.5
   } = props;
   const propsRef = useRef(props);
   propsRef.current = props;
