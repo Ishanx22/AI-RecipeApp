@@ -14,6 +14,13 @@ Recipe Generator
 
 ![Recipe Genie Demo](/project2.png)
 
+About Page
+
+![Recipe Genie Demo](/project3.png)
+
+Contact Page
+
+![Recipe Genie Demo](/project4.png)
 
 
 
