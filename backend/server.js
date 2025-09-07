@@ -17,9 +17,9 @@ app.post("/api/chatgpt", async (req, res) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer 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", // 🔁 Apni OpenRouter API key paste karo
-        "HTTP-Referer": "http://localhost:3000",  // Optional but recommended
-        "X-Title": "Recipe-AI-App"                // Optional but recommended
+        Authorization: "Bearer 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", 
+        "HTTP-Referer": "http://localhost:3000",  
+        "X-Title": "Recipe-AI-App"                
       },
       body: JSON.stringify({
         model: "deepseek/deepseek-r1-0528:free",

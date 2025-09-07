@@ -3,7 +3,6 @@
   color: #ffffff;
 }
 
-/* Hero Section */
 .hero-section {
   display: flex;
   align-items: center;
@@ -61,8 +60,8 @@
   width: 60%;
   height:60%;
   margin-left: -20px;
-  flex-shrink: 0;          /* 👈 Prevent shrinking */
-  position: relative;      /* 👈 Optional: in case you want to add decorations */
+  flex-shrink: 0;          
+  position: relative;      
 }
 
 .hero-image img {
@@ -70,7 +69,6 @@
   width: 100%;
   border-radius: 16px;
 
-  /* Shiny white border and glow */
   border: 3px solid rgba(255, 255, 255, 0.7);
   box-shadow: 
     0 0 12px rgba(255, 255, 255, 0.4), 
@@ -79,7 +77,6 @@
 
 
 
-/* How It Works Section */
 .how-section {
   padding: 4rem 2rem;
   color: #ffffff;
@@ -144,7 +141,6 @@
   background-color: #e65900;
 }
 
-/* Glow Button */
 .glow-button {
   padding: 12px 28px;
   font-size: 28px;
@@ -155,7 +151,7 @@
   color: #5A250A;
   cursor: pointer;
   position: relative;
-  overflow: visible; /* allow glow to show outside */
+  overflow: visible; 
   transition: transform 0.3s ease;
   box-shadow: 0 0 12px rgba(255, 140, 0, 0.6),
               0 0 24px rgba(255, 140, 0, 0.4),
@@ -165,7 +161,7 @@
 .glow-button::after {
   content: "";
   position: absolute;
-  inset: -0.2px; /* spread glow outside */
+  inset: -0.2px; 
   border-radius: inherit;
   background: linear-gradient(90deg, #d3d3d3 0%, #fff 100%);
     color: #5A250A;
@@ -174,7 +170,7 @@
               0 0 24px rgba(255, 140, 0, 0.4),
               0 0 36px rgba(255, 80, 0, 0.2);
   filter: blur(25px);
-  z-index: -1; /* behind button */
+  z-index: -1; 
 }
 
 .glow-button:hover {
@@ -182,7 +178,6 @@
 }
 
 
-/* Misc Styles */
 .bordered-image {
   width: 873px;
   height: 485.09px;
@@ -201,11 +196,10 @@
 .image-text-flex {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Align content to the left */
-  gap: 2rem;
+  justify-content: flex-start; 
   margin-top: 3rem;
   flex-wrap: wrap;
-  padding-left: 0; /* Make sure no padding is added */
+  padding-left: 0; 
   margin-left: 50px;
   
 }
