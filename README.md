@@ -4,9 +4,16 @@
 ✨ Recipe Genie is your casual kitchen buddy that instantly whips up recipes from the ingredients you already have. Simply add what’s in your kitchen, set optional calorie or protein goals, and let the genie do the magic. Quick, smart, and effortless — cooking made simple for everyone.
 
 
-## Demo
+## Images
+
+Landing Page
 
 ![Recipe Genie Demo](/project1.png)
+
+Recipe Generator
+
+![Recipe Genie Demo](/project2.png)
+
 
 
 
