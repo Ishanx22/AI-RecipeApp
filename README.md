@@ -40,7 +40,7 @@ Contact Page
 
 To deploy this project run
 
-1)Setup Api Key
+1) Setup Api Key
 
 2) Install Node
 
