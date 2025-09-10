@@ -82,6 +82,6 @@ Frontend- React
 2. Open `AI-RecipeApp/frontend/src/App.js` and replace line 58 with your key:
 
 ```javascript
-"Authorization": "Bearer [Your API Key]"";
+Authorization": "Bearer [Your API Key]";
 
 
