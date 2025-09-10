@@ -40,20 +40,22 @@ Contact Page
 
 To deploy this project run
 
-1) Install Node
+1)Setup Api Key
 
-2) Install Dependencies
+2) Install Node
+
+3) Install Dependencies
 
 ```bash
   npm install
 ```
-3) Start backend
+4) Start backend
 
 ```bash
   cd backend
   node server.js
 ```
-4) Start frontend
+5) Start frontend
 
 ```bash
   cd frontend
@@ -72,6 +74,14 @@ Frontend- React
 
 ## API Reference
 
-## Model
-- DeepSeek: R1 (Free) via OpenRouter
+### Setup: API Key
+
+1. Get your DeepSeek (R1 Free) API key:  
+   [https://openrouter.ai/deepseek/deepseek-r1:free/api](https://openrouter.ai/deepseek/deepseek-r1:free/api)
+
+2. Open `AI-RecipeApp/frontend/src/App.js` and replace line 58 with your key:
+
+```javascript
+const API_KEY = "YOUR_API_KEY_HERE";
+
 
